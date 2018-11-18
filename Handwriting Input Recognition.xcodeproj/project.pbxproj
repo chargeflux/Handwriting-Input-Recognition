@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B7E0ED221A06F6D00178FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7E0ED121A06F6D00178FA4 /* Assets.xcassets */; };
+		5B7E0ED521A06F6D00178FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7E0ED321A06F6D00178FA4 /* Main.storyboard */; };
+		5B7E0EE121A06F6D00178FA4 /* Handwriting_Input_RecognitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E0EE021A06F6D00178FA4 /* Handwriting_Input_RecognitionTests.swift */; };
+		5B7E0EEF21A06FB000178FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E0EEC21A06FB000178FA4 /* AppDelegate.swift */; };
+		5B7E0EF021A06FB000178FA4 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E0EED21A06FB000178FA4 /* CanvasView.swift */; };
+		5B7E0EF121A06FB000178FA4 /* CharacterOptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E0EEE21A06FB000178FA4 /* CharacterOptionItem.swift */; };
+		5B7E0EF421A06FE000178FA4 /* CharacterOptionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7E0EF221A06FE000178FA4 /* CharacterOptionItem.xib */; };
+		5B7E0EF821A0703C00178FA4 /* SLTesseract.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E0EF621A0703B00178FA4 /* SLTesseract.mm */; };
+		5B7E0F4121A0705E00178FA4 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3921A0705E00178FA4 /* libz.a */; };
+		5B7E0F4221A0705E00178FA4 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3A21A0705E00178FA4 /* libpng.a */; };
+		5B7E0F4321A0705E00178FA4 /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3B21A0705E00178FA4 /* libtiff.a */; };
+		5B7E0F4421A0705E00178FA4 /* libtesseract.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3C21A0705E00178FA4 /* libtesseract.dylib */; };
+		5B7E0F4521A0705E00178FA4 /* libtesseract.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3D21A0705E00178FA4 /* libtesseract.a */; };
+		5B7E0F4621A0705E00178FA4 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3E21A0705E00178FA4 /* libjpeg.a */; };
+		5B7E0F4721A0705E00178FA4 /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3F21A0705E00178FA4 /* liblept.a */; };
+		5B7E0F4821A0705E00178FA4 /* libtesseract.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F4021A0705E00178FA4 /* libtesseract.4.dylib */; };
+		5B7E0F4A21A0706900178FA4 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 5B7E0F4921A0706900178FA4 /* tessdata */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B7E0EDD21A06F6D00178FA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B7E0EC221A06F6C00178FA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B7E0EC921A06F6C00178FA4;
+			remoteInfo = "Handwriting Input Recognition";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B7E0ECA21A06F6C00178FA4 /* Handwriting Input Recognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handwriting Input Recognition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B7E0ED121A06F6D00178FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B7E0ED421A06F6D00178FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B7E0ED621A06F6D00178FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B7E0ED721A06F6D00178FA4 /* Handwriting_Input_Recognition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Handwriting_Input_Recognition.entitlements; sourceTree = "<group>"; };
+		5B7E0EDC21A06F6D00178FA4 /* Handwriting Input RecognitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Handwriting Input RecognitionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B7E0EE021A06F6D00178FA4 /* Handwriting_Input_RecognitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handwriting_Input_RecognitionTests.swift; sourceTree = "<group>"; };
+		5B7E0EE221A06F6D00178FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B7E0EEB21A06FAF00178FA4 /* Handwriting Input Recognition-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Handwriting Input Recognition-Bridging-Header.h"; sourceTree = "<group>"; };
+		5B7E0EEC21A06FB000178FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B7E0EED21A06FB000178FA4 /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		5B7E0EEE21A06FB000178FA4 /* CharacterOptionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterOptionItem.swift; sourceTree = "<group>"; };
+		5B7E0EF221A06FE000178FA4 /* CharacterOptionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterOptionItem.xib; sourceTree = "<group>"; };
+		5B7E0EF621A0703B00178FA4 /* SLTesseract.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SLTesseract.mm; sourceTree = "<group>"; };
+		5B7E0EF721A0703B00178FA4 /* SLTesseract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTesseract.h; sourceTree = "<group>"; };
+		5B7E0EFA21A0705E00178FA4 /* jpeglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jpeglib.h; sourceTree = "<group>"; };
+		5B7E0EFB21A0705E00178FA4 /* jerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jerror.h; sourceTree = "<group>"; };
+		5B7E0EFC21A0705E00178FA4 /* tiff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiff.h; sourceTree = "<group>"; };
+		5B7E0EFD21A0705E00178FA4 /* tiffvers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiffvers.h; sourceTree = "<group>"; };
+		5B7E0EFF21A0705E00178FA4 /* ltrresultiterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ltrresultiterator.h; sourceTree = "<group>"; };
+		5B7E0F0021A0705E00178FA4 /* pageiterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pageiterator.h; sourceTree = "<group>"; };
+		5B7E0F0121A0705E00178FA4 /* host.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = host.h; sourceTree = "<group>"; };
+		5B7E0F0221A0705E00178FA4 /* apitypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apitypes.h; sourceTree = "<group>"; };
+		5B7E0F0321A0705E00178FA4 /* renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = renderer.h; sourceTree = "<group>"; };
+		5B7E0F0421A0705E00178FA4 /* publictypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = publictypes.h; sourceTree = "<group>"; };
+		5B7E0F0521A0705E00178FA4 /* unichar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unichar.h; sourceTree = "<group>"; };
+		5B7E0F0621A0705E00178FA4 /* ocrclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocrclass.h; sourceTree = "<group>"; };
+		5B7E0F0721A0705E00178FA4 /* resultiterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resultiterator.h; sourceTree = "<group>"; };
+		5B7E0F0821A0705E00178FA4 /* serialis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serialis.h; sourceTree = "<group>"; };
+		5B7E0F0921A0705E00178FA4 /* baseapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseapi.h; sourceTree = "<group>"; };
+		5B7E0F0A21A0705E00178FA4 /* capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = capi.h; sourceTree = "<group>"; };
+		5B7E0F0B21A0705E00178FA4 /* tess_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tess_version.h; sourceTree = "<group>"; };
+		5B7E0F0C21A0705E00178FA4 /* strngs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strngs.h; sourceTree = "<group>"; };
+		5B7E0F0D21A0705E00178FA4 /* genericvector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genericvector.h; sourceTree = "<group>"; };
+		5B7E0F0E21A0705E00178FA4 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		5B7E0F0F21A0705E00178FA4 /* thresholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thresholder.h; sourceTree = "<group>"; };
+		5B7E0F1021A0705E00178FA4 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
+		5B7E0F1121A0705E00178FA4 /* tesscallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tesscallback.h; sourceTree = "<group>"; };
+		5B7E0F1221A0705E00178FA4 /* png.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = png.h; sourceTree = "<group>"; };
+		5B7E0F1321A0705E00178FA4 /* pnglibconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pnglibconf.h; sourceTree = "<group>"; };
+		5B7E0F1421A0705E00178FA4 /* pngconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pngconf.h; sourceTree = "<group>"; };
+		5B7E0F1521A0705E00178FA4 /* jconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jconfig.h; sourceTree = "<group>"; };
+		5B7E0F1621A0705E00178FA4 /* jmorecfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jmorecfg.h; sourceTree = "<group>"; };
+		5B7E0F1721A0705E00178FA4 /* tiffio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiffio.h; sourceTree = "<group>"; };
+		5B7E0F1921A0705E00178FA4 /* dewarp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dewarp.h; sourceTree = "<group>"; };
+		5B7E0F1A21A0705E00178FA4 /* allheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allheaders.h; sourceTree = "<group>"; };
+		5B7E0F1B21A0705E00178FA4 /* imageio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageio.h; sourceTree = "<group>"; };
+		5B7E0F1C21A0705E00178FA4 /* bilateral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bilateral.h; sourceTree = "<group>"; };
+		5B7E0F1D21A0705E00178FA4 /* morph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = morph.h; sourceTree = "<group>"; };
+		5B7E0F1E21A0705E00178FA4 /* endianness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = endianness.h; sourceTree = "<group>"; };
+		5B7E0F1F21A0705E00178FA4 /* bbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bbuffer.h; sourceTree = "<group>"; };
+		5B7E0F2021A0705E00178FA4 /* jbclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jbclass.h; sourceTree = "<group>"; };
+		5B7E0F2121A0705E00178FA4 /* bmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmp.h; sourceTree = "<group>"; };
+		5B7E0F2221A0705E00178FA4 /* bmf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmf.h; sourceTree = "<group>"; };
+		5B7E0F2321A0705E00178FA4 /* recog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recog.h; sourceTree = "<group>"; };
+		5B7E0F2421A0705E00178FA4 /* environ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = environ.h; sourceTree = "<group>"; };
+		5B7E0F2521A0705E00178FA4 /* readbarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readbarcode.h; sourceTree = "<group>"; };
+		5B7E0F2621A0705E00178FA4 /* regutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regutils.h; sourceTree = "<group>"; };
+		5B7E0F2721A0705E00178FA4 /* sudoku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sudoku.h; sourceTree = "<group>"; };
+		5B7E0F2821A0705E00178FA4 /* gplot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gplot.h; sourceTree = "<group>"; };
+		5B7E0F2921A0705E00178FA4 /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		5B7E0F2A21A0705E00178FA4 /* stringcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringcode.h; sourceTree = "<group>"; };
+		5B7E0F2B21A0705E00178FA4 /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = array.h; sourceTree = "<group>"; };
+		5B7E0F2C21A0705E00178FA4 /* ptra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptra.h; sourceTree = "<group>"; };
+		5B7E0F2D21A0705E00178FA4 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		5B7E0F2E21A0705E00178FA4 /* heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heap.h; sourceTree = "<group>"; };
+		5B7E0F2F21A0705E00178FA4 /* watershed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = watershed.h; sourceTree = "<group>"; };
+		5B7E0F3021A0705E00178FA4 /* ccbord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccbord.h; sourceTree = "<group>"; };
+		5B7E0F3121A0705E00178FA4 /* alltypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = alltypes.h; sourceTree = "<group>"; };
+		5B7E0F3221A0705E00178FA4 /* leptwin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leptwin.h; sourceTree = "<group>"; };
+		5B7E0F3321A0705E00178FA4 /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		5B7E0F3421A0705E00178FA4 /* bmfdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmfdata.h; sourceTree = "<group>"; };
+		5B7E0F3521A0705E00178FA4 /* pix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pix.h; sourceTree = "<group>"; };
+		5B7E0F3621A0705E00178FA4 /* arrayaccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arrayaccess.h; sourceTree = "<group>"; };
+		5B7E0F3721A0705E00178FA4 /* tiffconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiffconf.h; sourceTree = "<group>"; };
+		5B7E0F3921A0705E00178FA4 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libz.a; sourceTree = "<group>"; };
+		5B7E0F3A21A0705E00178FA4 /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpng.a; sourceTree = "<group>"; };
+		5B7E0F3B21A0705E00178FA4 /* libtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiff.a; sourceTree = "<group>"; };
+		5B7E0F3C21A0705E00178FA4 /* libtesseract.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtesseract.dylib; sourceTree = "<group>"; };
+		5B7E0F3D21A0705E00178FA4 /* libtesseract.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtesseract.a; sourceTree = "<group>"; };
+		5B7E0F3E21A0705E00178FA4 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
+		5B7E0F3F21A0705E00178FA4 /* liblept.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblept.a; sourceTree = "<group>"; };
+		5B7E0F4021A0705E00178FA4 /* libtesseract.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtesseract.4.dylib; sourceTree = "<group>"; };
+		5B7E0F4921A0706900178FA4 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B7E0EC721A06F6C00178FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7E0F4721A0705E00178FA4 /* liblept.a in Frameworks */,
+				5B7E0F4121A0705E00178FA4 /* libz.a in Frameworks */,
+				5B7E0F4521A0705E00178FA4 /* libtesseract.a in Frameworks */,
+				5B7E0F4421A0705E00178FA4 /* libtesseract.dylib in Frameworks */,
+				5B7E0F4221A0705E00178FA4 /* libpng.a in Frameworks */,
+				5B7E0F4821A0705E00178FA4 /* libtesseract.4.dylib in Frameworks */,
+				5B7E0F4321A0705E00178FA4 /* libtiff.a in Frameworks */,
+				5B7E0F4621A0705E00178FA4 /* libjpeg.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B7E0ED921A06F6D00178FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B7E0EC121A06F6C00178FA4 = {
+			isa = PBXGroup;
+			children = (
+				5B7E0EF921A0705E00178FA4 /* include */,
+				5B7E0F3821A0705E00178FA4 /* lib */,
+				5B7E0ECC21A06F6C00178FA4 /* Handwriting Input Recognition */,
+				5B7E0EDF21A06F6D00178FA4 /* Handwriting Input RecognitionTests */,
+				5B7E0ECB21A06F6C00178FA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B7E0ECB21A06F6C00178FA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E0ECA21A06F6C00178FA4 /* Handwriting Input Recognition.app */,
+				5B7E0EDC21A06F6D00178FA4 /* Handwriting Input RecognitionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B7E0ECC21A06F6C00178FA4 /* Handwriting Input Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E0EEC21A06FB000178FA4 /* AppDelegate.swift */,
+				5B7E0EF721A0703B00178FA4 /* SLTesseract.h */,
+				5B7E0EF621A0703B00178FA4 /* SLTesseract.mm */,
+				5B7E0EEE21A06FB000178FA4 /* CharacterOptionItem.swift */,
+				5B7E0EF221A06FE000178FA4 /* CharacterOptionItem.xib */,
+				5B7E0EED21A06FB000178FA4 /* CanvasView.swift */,
+				5B7E0ED121A06F6D00178FA4 /* Assets.xcassets */,
+				5B7E0ED321A06F6D00178FA4 /* Main.storyboard */,
+				5B7E0ED721A06F6D00178FA4 /* Handwriting_Input_Recognition.entitlements */,
+				5B7E0ED621A06F6D00178FA4 /* Info.plist */,
+				5B7E0EEB21A06FAF00178FA4 /* Handwriting Input Recognition-Bridging-Header.h */,
+				5B7E0F4921A0706900178FA4 /* tessdata */,
+			);
+			path = "Handwriting Input Recognition";
+			sourceTree = "<group>";
+		};
+		5B7E0EDF21A06F6D00178FA4 /* Handwriting Input RecognitionTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E0EE021A06F6D00178FA4 /* Handwriting_Input_RecognitionTests.swift */,
+				5B7E0EE221A06F6D00178FA4 /* Info.plist */,
+			);
+			path = "Handwriting Input RecognitionTests";
+			sourceTree = "<group>";
+		};
+		5B7E0EF921A0705E00178FA4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E0EFA21A0705E00178FA4 /* jpeglib.h */,
+				5B7E0EFB21A0705E00178FA4 /* jerror.h */,
+				5B7E0EFC21A0705E00178FA4 /* tiff.h */,
+				5B7E0EFD21A0705E00178FA4 /* tiffvers.h */,
+				5B7E0EFE21A0705E00178FA4 /* tesseract */,
+				5B7E0F1221A0705E00178FA4 /* png.h */,
+				5B7E0F1321A0705E00178FA4 /* pnglibconf.h */,
+				5B7E0F1421A0705E00178FA4 /* pngconf.h */,
+				5B7E0F1521A0705E00178FA4 /* jconfig.h */,
+				5B7E0F1621A0705E00178FA4 /* jmorecfg.h */,
+				5B7E0F1721A0705E00178FA4 /* tiffio.h */,
+				5B7E0F1821A0705E00178FA4 /* leptonica */,
+				5B7E0F3721A0705E00178FA4 /* tiffconf.h */,
+			);
+			name = include;
+			path = "Handwriting Input Recognition/include";
+			sourceTree = "<group>";
+		};
+		5B7E0EFE21A0705E00178FA4 /* tesseract */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E0EFF21A0705E00178FA4 /* ltrresultiterator.h */,
+				5B7E0F0021A0705E00178FA4 /* pageiterator.h */,
+				5B7E0F0121A0705E00178FA4 /* host.h */,
+				5B7E0F0221A0705E00178FA4 /* apitypes.h */,
+				5B7E0F0321A0705E00178FA4 /* renderer.h */,
+				5B7E0F0421A0705E00178FA4 /* publictypes.h */,
+				5B7E0F0521A0705E00178FA4 /* unichar.h */,
+				5B7E0F0621A0705E00178FA4 /* ocrclass.h */,
+				5B7E0F0721A0705E00178FA4 /* resultiterator.h */,
+				5B7E0F0821A0705E00178FA4 /* serialis.h */,
+				5B7E0F0921A0705E00178FA4 /* baseapi.h */,
+				5B7E0F0A21A0705E00178FA4 /* capi.h */,
+				5B7E0F0B21A0705E00178FA4 /* tess_version.h */,
+				5B7E0F0C21A0705E00178FA4 /* strngs.h */,
+				5B7E0F0D21A0705E00178FA4 /* genericvector.h */,
+				5B7E0F0E21A0705E00178FA4 /* helpers.h */,
+				5B7E0F0F21A0705E00178FA4 /* thresholder.h */,
+				5B7E0F1021A0705E00178FA4 /* platform.h */,
+				5B7E0F1121A0705E00178FA4 /* tesscallback.h */,
+			);
+			path = tesseract;
+			sourceTree = "<group>";
+		};
+		5B7E0F1821A0705E00178FA4 /* leptonica */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E0F1921A0705E00178FA4 /* dewarp.h */,
+				5B7E0F1A21A0705E00178FA4 /* allheaders.h */,
+				5B7E0F1B21A0705E00178FA4 /* imageio.h */,
+				5B7E0F1C21A0705E00178FA4 /* bilateral.h */,
+				5B7E0F1D21A0705E00178FA4 /* morph.h */,
+				5B7E0F1E21A0705E00178FA4 /* endianness.h */,
+				5B7E0F1F21A0705E00178FA4 /* bbuffer.h */,
+				5B7E0F2021A0705E00178FA4 /* jbclass.h */,
+				5B7E0F2121A0705E00178FA4 /* bmp.h */,
+				5B7E0F2221A0705E00178FA4 /* bmf.h */,
+				5B7E0F2321A0705E00178FA4 /* recog.h */,
+				5B7E0F2421A0705E00178FA4 /* environ.h */,
+				5B7E0F2521A0705E00178FA4 /* readbarcode.h */,
+				5B7E0F2621A0705E00178FA4 /* regutils.h */,
+				5B7E0F2721A0705E00178FA4 /* sudoku.h */,
+				5B7E0F2821A0705E00178FA4 /* gplot.h */,
+				5B7E0F2921A0705E00178FA4 /* list.h */,
+				5B7E0F2A21A0705E00178FA4 /* stringcode.h */,
+				5B7E0F2B21A0705E00178FA4 /* array.h */,
+				5B7E0F2C21A0705E00178FA4 /* ptra.h */,
+				5B7E0F2D21A0705E00178FA4 /* stack.h */,
+				5B7E0F2E21A0705E00178FA4 /* heap.h */,
+				5B7E0F2F21A0705E00178FA4 /* watershed.h */,
+				5B7E0F3021A0705E00178FA4 /* ccbord.h */,
+				5B7E0F3121A0705E00178FA4 /* alltypes.h */,
+				5B7E0F3221A0705E00178FA4 /* leptwin.h */,
+				5B7E0F3321A0705E00178FA4 /* queue.h */,
+				5B7E0F3421A0705E00178FA4 /* bmfdata.h */,
+				5B7E0F3521A0705E00178FA4 /* pix.h */,
+				5B7E0F3621A0705E00178FA4 /* arrayaccess.h */,
+			);
+			path = leptonica;
+			sourceTree = "<group>";
+		};
+		5B7E0F3821A0705E00178FA4 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E0F3921A0705E00178FA4 /* libz.a */,
+				5B7E0F3A21A0705E00178FA4 /* libpng.a */,
+				5B7E0F3B21A0705E00178FA4 /* libtiff.a */,
+				5B7E0F3C21A0705E00178FA4 /* libtesseract.dylib */,
+				5B7E0F3D21A0705E00178FA4 /* libtesseract.a */,
+				5B7E0F3E21A0705E00178FA4 /* libjpeg.a */,
+				5B7E0F3F21A0705E00178FA4 /* liblept.a */,
+				5B7E0F4021A0705E00178FA4 /* libtesseract.4.dylib */,
+			);
+			name = lib;
+			path = "Handwriting Input Recognition/lib";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B7E0EC921A06F6C00178FA4 /* Handwriting Input Recognition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B7E0EE521A06F6D00178FA4 /* Build configuration list for PBXNativeTarget "Handwriting Input Recognition" */;
+			buildPhases = (
+				5B7E0EC621A06F6C00178FA4 /* Sources */,
+				5B7E0EC721A06F6C00178FA4 /* Frameworks */,
+				5B7E0EC821A06F6C00178FA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Handwriting Input Recognition";
+			productName = "Handwriting Input Recognition";
+			productReference = 5B7E0ECA21A06F6C00178FA4 /* Handwriting Input Recognition.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B7E0EDB21A06F6D00178FA4 /* Handwriting Input RecognitionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B7E0EE821A06F6D00178FA4 /* Build configuration list for PBXNativeTarget "Handwriting Input RecognitionTests" */;
+			buildPhases = (
+				5B7E0ED821A06F6D00178FA4 /* Sources */,
+				5B7E0ED921A06F6D00178FA4 /* Frameworks */,
+				5B7E0EDA21A06F6D00178FA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B7E0EDE21A06F6D00178FA4 /* PBXTargetDependency */,
+			);
+			name = "Handwriting Input RecognitionTests";
+			productName = "Handwriting Input RecognitionTests";
+			productReference = 5B7E0EDC21A06F6D00178FA4 /* Handwriting Input RecognitionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B7E0EC221A06F6C00178FA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = chargeflux;
+				TargetAttributes = {
+					5B7E0EC921A06F6C00178FA4 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					5B7E0EDB21A06F6D00178FA4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5B7E0EC921A06F6C00178FA4;
+					};
+				};
+			};
+			buildConfigurationList = 5B7E0EC521A06F6C00178FA4 /* Build configuration list for PBXProject "Handwriting Input Recognition" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B7E0EC121A06F6C00178FA4;
+			productRefGroup = 5B7E0ECB21A06F6C00178FA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B7E0EC921A06F6C00178FA4 /* Handwriting Input Recognition */,
+				5B7E0EDB21A06F6D00178FA4 /* Handwriting Input RecognitionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B7E0EC821A06F6C00178FA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7E0EF421A06FE000178FA4 /* CharacterOptionItem.xib in Resources */,
+				5B7E0F4A21A0706900178FA4 /* tessdata in Resources */,
+				5B7E0ED221A06F6D00178FA4 /* Assets.xcassets in Resources */,
+				5B7E0ED521A06F6D00178FA4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B7E0EDA21A06F6D00178FA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B7E0EC621A06F6C00178FA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7E0EF021A06FB000178FA4 /* CanvasView.swift in Sources */,
+				5B7E0EF121A06FB000178FA4 /* CharacterOptionItem.swift in Sources */,
+				5B7E0EEF21A06FB000178FA4 /* AppDelegate.swift in Sources */,
+				5B7E0EF821A0703C00178FA4 /* SLTesseract.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B7E0ED821A06F6D00178FA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7E0EE121A06F6D00178FA4 /* Handwriting_Input_RecognitionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B7E0EDE21A06F6D00178FA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B7E0EC921A06F6C00178FA4 /* Handwriting Input Recognition */;
+			targetProxy = 5B7E0EDD21A06F6D00178FA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B7E0ED321A06F6D00178FA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B7E0ED421A06F6D00178FA4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B7E0EE321A06F6D00178FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B7E0EE421A06F6D00178FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		5B7E0EE621A06F6D00178FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Handwriting Input Recognition/Handwriting_Input_Recognition.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Handwriting Input Recognition/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chargeflux.HandwritingInputRecognition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Handwriting Input Recognition/Handwriting Input Recognition-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		5B7E0EE721A06F6D00178FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Handwriting Input Recognition/Handwriting_Input_Recognition.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Handwriting Input Recognition/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chargeflux.HandwritingInputRecognition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Handwriting Input Recognition/Handwriting Input Recognition-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		5B7E0EE921A06F6D00178FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Handwriting Input RecognitionTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chargeflux.Handwriting-Input-RecognitionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Handwriting Input Recognition.app/Contents/MacOS/Handwriting Input Recognition";
+			};
+			name = Debug;
+		};
+		5B7E0EEA21A06F6D00178FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Handwriting Input RecognitionTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chargeflux.Handwriting-Input-RecognitionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Handwriting Input Recognition.app/Contents/MacOS/Handwriting Input Recognition";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B7E0EC521A06F6C00178FA4 /* Build configuration list for PBXProject "Handwriting Input Recognition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B7E0EE321A06F6D00178FA4 /* Debug */,
+				5B7E0EE421A06F6D00178FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B7E0EE521A06F6D00178FA4 /* Build configuration list for PBXNativeTarget "Handwriting Input Recognition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B7E0EE621A06F6D00178FA4 /* Debug */,
+				5B7E0EE721A06F6D00178FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B7E0EE821A06F6D00178FA4 /* Build configuration list for PBXNativeTarget "Handwriting Input RecognitionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B7E0EE921A06F6D00178FA4 /* Debug */,
+				5B7E0EEA21A06F6D00178FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B7E0EC221A06F6C00178FA4 /* Project object */;
+}
