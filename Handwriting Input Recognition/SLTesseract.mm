@@ -2,9 +2,9 @@
 //  SLTesseract.mm
 //  testOCR
 //
-//  Created by ScottLiu on 4/27/18.
+//  Created by Scott Liu on 4/27/18.
 //  Copyright © 2018 Scott Liu. All rights reserved.
-//
+//  Inspired by Loïs Di Qual (24/09/12)
 
 #import <AppKit/AppKit.h>
 #import "SLTesseract.h"
@@ -144,6 +144,7 @@
             delete[] symbol;
         } while((ri->Next(level)));
     }
+    delete ri;
     NSArray *resultFinal = [result copy];
     return resultFinal;
 }
