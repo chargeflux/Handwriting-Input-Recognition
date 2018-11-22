@@ -6,11 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="CharacterOptionItem" customModule="Handwriting Input Recognition" customModuleProvider="target">
-            <connections>
-                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
-            </connections>
-        </customObject>
+        <customObject id="-2" userLabel="File's Owner" customClass="CharacterOptionItem" customModule="Handwriting_Input_Recognition" customModuleProvider="target"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
@@ -28,7 +24,7 @@
                 </textField>
             </subviews>
         </customView>
-        <customObject id="cga-Uv-t55" customClass="CharacterOptionItem" customModule="Handwriting Input Recognition" customModuleProvider="target">
+        <customObject id="cga-Uv-t55" customClass="CharacterOptionItem" customModule="Handwriting_Input_Recognition" customModuleProvider="target">
             <connections>
                 <outlet property="textField" destination="Mae-Bc-gaM" id="UZ5-Ds-cXJ"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="H7a-n4-omC"/>
