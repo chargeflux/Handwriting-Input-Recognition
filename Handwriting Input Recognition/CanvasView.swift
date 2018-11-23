@@ -59,29 +59,33 @@ class CanvasView: NSViewController {
         self.keyboardShortcutMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown, handler: keyboardShortcut)
     }
         
-    func keyboardShortcut(_ event: NSEvent) -> NSEvent {
+    func keyboardShortcut(_ event: NSEvent) -> NSEvent? {
+        /// If particular shortcut is pressed, certain functions are executed and returns the
+        /// the event as `nil` to prevent triggering the "Basso"/default alert sound because the
+        /// system won't recognize the key press as a valid input/shortcut. Otherwise the event
+        /// is returned as is to the system input manager to be processed.
         switch Int(event.keyCode) {
         /// Check if Escape key is pressed: Clear canvas
         case kVK_Escape:
             if event.isARepeat {
                 /// Hold Escape key to reset `CanvasView`
                 resetCanvasView()
-                return event
+                return nil
             }
             DrawView?.clearCanvas()
             self.choices = nil
-            return event
+            return nil
         /// Check if Return key is pressed: Initiate OCR and parse results
         case kVK_Return:
             guard let (result, rawChoiceArray) = DrawView?.ocr() else{
-                return event
+                return nil
             }
             self.result = result
             /// Parse Tesseract's alternative choices
             let choicesArray = rawChoiceArray as! Array<Array<NSArray>>
             self.choices = CharacterChoices(choicesArray: choicesArray)
             CharacterOptionCollection.reloadData()
-            return event
+            return nil
         /// Check if "C" key is pressed: Copy field to clipboard and clear
         case kVK_ANSI_C:
             if event.isARepeat {
@@ -90,9 +94,9 @@ class CanvasView: NSViewController {
                     copyCharacterOutputToClipboard()
                     resetCanvasView()
                 }
-                return event
+                return nil
             }
-            return event
+            return nil
         default:
             return event
         }
