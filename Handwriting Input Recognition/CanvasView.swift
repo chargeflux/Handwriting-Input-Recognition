@@ -17,8 +17,7 @@ class CanvasView: NSViewController {
     
     /// Holds instance of "CharacterChoices" class that holds all possible interpretations by Tesseract
     var choices: CharacterChoices!
-    
-    
+
     /// Collection View showing all possible interpretations by Tesseract
     @IBOutlet var CharacterOptionCollection: NSCollectionView!
     
@@ -88,6 +87,10 @@ class CanvasView: NSViewController {
             return nil
         /// Check if "C" key is pressed: Copy field to clipboard and clear
         case kVK_ANSI_C:
+            /// Prevent overwriting of clipboard with empty string
+            if CharacterOutput.stringValue.isEmpty {
+                return nil
+            }
             if event.isARepeat {
                 /// Prevents overwriting of clipboard if "C" is held down too long
                 if choices != nil {
@@ -96,6 +99,8 @@ class CanvasView: NSViewController {
                 }
                 return nil
             }
+            copyCharacterOutputToClipboard()
+            resetCanvasView()
             return nil
         default:
             return event
