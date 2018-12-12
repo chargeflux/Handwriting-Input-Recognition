@@ -35,4 +35,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
     - LibZ (v1.2.11)
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](./LICENSE.txt)
