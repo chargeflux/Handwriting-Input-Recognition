@@ -29,7 +29,8 @@ class CanvasView: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /// Make canvas background to be white
+        
+        // Make canvas background to be white
         self.view.wantsLayer = true
         self.view.layer?.backgroundColor = NSColor.white.cgColor
         
@@ -37,37 +38,37 @@ class CanvasView: NSViewController {
         startKeyboardShortcutMonitor()
     }
     
+    /// Reset `CanvasView` completely
     func resetCanvasView() {
-        /// Reset `CanvasView` completely
         DrawView?.clearCanvas()
         self.CharacterOutput.stringValue = ""
         self.choices = nil
         CharacterOptionCollection.reloadData()
     }
     
+    /// Copy the contents of text field `CharacterOutput` to pasteboard
     func copyCharacterOutputToClipboard() {
-        /// Copy the contents of text field `CharacterOutput` to pasteboard
         let stringToCopy = self.CharacterOutput.stringValue
         let pasteboard = NSPasteboard.general
         pasteboard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil)
         pasteboard.setString(stringToCopy, forType: NSPasteboard.PasteboardType.string)
     }
     
+    /// Initializes monitor for keyboard shortcuts, i.e., when user presses a key
     func startKeyboardShortcutMonitor() {
-        /// Initializes monitor for keyboard shortcuts, i.e., when user presses a key
         self.keyboardShortcutMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown, handler: keyboardShortcut)
     }
         
     func keyboardShortcut(_ event: NSEvent) -> NSEvent? {
-        /// If particular shortcut is pressed, certain functions are executed and returns the
-        /// the event as `nil` to prevent triggering the "Basso"/default alert sound because the
-        /// system won't recognize the key press as a valid input/shortcut. Otherwise the event
-        /// is returned as is to the system input manager to be processed.
+        // If particular shortcut is pressed, certain functions are executed and returns the
+        // the event as `nil` to prevent triggering the "Basso"/default alert sound because the
+        // system won't recognize the key press as a valid input/shortcut. Otherwise the event
+        // is returned as is to the system input manager to be processed.
         switch Int(event.keyCode) {
         /// Check if Escape key is pressed: Clear canvas
         case kVK_Escape:
             if event.isARepeat {
-                /// Hold Escape key to reset `CanvasView`
+                // Hold Escape key to reset `CanvasView`
                 resetCanvasView()
                 return nil
             }
@@ -80,19 +81,19 @@ class CanvasView: NSViewController {
                 return nil
             }
             self.result = result
-            /// Parse Tesseract's alternative choices
+            // Parse Tesseract's alternative choices
             let choicesArray = rawChoiceArray as! Array<Array<NSArray>>
             self.choices = CharacterChoices(choicesArray: choicesArray)
             CharacterOptionCollection.reloadData()
             return nil
         /// Check if "C" key is pressed: Copy field to clipboard and clear
         case kVK_ANSI_C:
-            /// Prevent overwriting of clipboard with empty string
+            // Prevent overwriting of clipboard with empty string
             if CharacterOutput.stringValue.isEmpty {
                 return nil
             }
             if event.isARepeat {
-                /// Prevents overwriting of clipboard if "C" is held down too long
+                // Prevents overwriting of clipboard if "C" is held down too long
                 if choices != nil {
                     copyCharacterOutputToClipboard()
                     resetCanvasView()
@@ -107,18 +108,17 @@ class CanvasView: NSViewController {
         }
     }
 }
-    
+
+/// Custom NSView class for drawing capabilities
 class DrawCanvas: NSView {
-    /// Custom NSView class for drawing capabilities
-    
-    /// Initiate class variables for initiating path and Tesseract
-    /// Path is not contiguous and will only be cleared upon user action (escape key)
+    // Initiate class variables for initiating path and Tesseract
+    // Path is not contiguous and will only be cleared upon user action (escape key)
     var startingPoint:CGPoint!
     var path: NSBezierPath = NSBezierPath()
     
+    /// Get starting point and tells `path` the starting point
+    /// Will be called every time user clicks left button (allowing for new paths)
     override func mouseDown(with event: NSEvent) {
-        /// Get starting point and tells `path` the starting point
-        /// Will be called every time user clicks left button (allowing for new paths)
         let mouseButton = event.buttonNumber
         
         // Debugging purposes
@@ -130,14 +130,14 @@ class DrawCanvas: NSView {
         needsDisplay = true
     }
 
+    /// Tells the new destination point from starting point to `path` and makes it draw
     override func mouseDragged(with event: NSEvent) {
-        /// Tells the new destination point from starting point to `path` and makes it draw
         path.line(to: convert(event.locationInWindow, from: nil))
         needsDisplay = true
     }
 
+    /// Drawing function of path with properties
     override func draw(_ dirtyRect: NSRect) {
-        /// Drawing function of path with properties
         super.draw(dirtyRect)
         path.lineWidth = 3.0
         path.lineCapStyle = .round
@@ -146,18 +146,18 @@ class DrawCanvas: NSView {
         path.stroke()
     }
     
+    /// Clears canvas
     func clearCanvas() {
-        /// Clears canvas
         path.removeAllPoints() // .removeAllPoints & reinstantiating `path`
         path = NSBezierPath() // with NSBezierPath() are required to remove `path` completely
         needsDisplay = true
     }
     
+    /// Initiates OCR via Tesseract
+    /// - Returns:
+    ///    - String: Tesseract's result with highest confidence interval
+    ///    - NSArray: A nested array of all possible character choices interpreted by Tesseract with CI
     func ocr() -> (String, NSArray) {
-        /// Initiates OCR via Tesseract
-        /// - Returns:
-        ///    - String: Tesseract's result with highest confidence interval
-        ///    - NSArray: A nested array of all possible character choices interpreted by Tesseract with CI
         let Tesseract = SLTesseract()
         Tesseract.language = "jpn"
         let viewSize: NSSize = self.bounds.size;
@@ -171,12 +171,11 @@ class DrawCanvas: NSView {
     }
 }
 
+/// Holds all possible choices as interpreted by Tesseract for given canvas image
+/// `possibleChoice`: struct
+///    - character = a possible character as interpreted by Tesseract
+///    - confidenceInterval = associated CI to possible character
 class CharacterChoices {
-    /// Holds all possible choices as interpreted by Tesseract for given canvas image
-    /// `possibleChoice`: struct
-    ///    - character = a possible character as interpreted by Tesseract
-    ///    - confidenceInterval = associated CI to possible character
-   
     struct possibleChoice {
         var character: String
         var confidenceInterval: Double
@@ -219,7 +218,7 @@ extension CanvasView: NSCollectionViewDataSource {
             return item
         }
         else {
-            /// Populate `CharacterOptionCollection` items with all of Tesseract's possible choices
+            // Populate `CharacterOptionCollection` items with all of Tesseract's possible choices
             item.textField?.stringValue = self.choices.possibleChoicesArray[indexPath[1]].character
         }
         return item
