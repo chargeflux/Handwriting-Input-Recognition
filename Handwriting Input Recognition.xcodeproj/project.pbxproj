@@ -11,19 +11,21 @@
 		5B7E0ED521A06F6D00178FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7E0ED321A06F6D00178FA4 /* Main.storyboard */; };
 		5B7E0EE121A06F6D00178FA4 /* Handwriting_Input_RecognitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E0EE021A06F6D00178FA4 /* Handwriting_Input_RecognitionTests.swift */; };
 		5B7E0EEF21A06FB000178FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E0EEC21A06FB000178FA4 /* AppDelegate.swift */; };
-		5B7E0EF021A06FB000178FA4 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E0EED21A06FB000178FA4 /* CanvasView.swift */; };
+		5B7E0EF021A06FB000178FA4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E0EED21A06FB000178FA4 /* MainViewController.swift */; };
 		5B7E0EF121A06FB000178FA4 /* CharacterOptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E0EEE21A06FB000178FA4 /* CharacterOptionItem.swift */; };
 		5B7E0EF421A06FE000178FA4 /* CharacterOptionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7E0EF221A06FE000178FA4 /* CharacterOptionItem.xib */; };
 		5B7E0EF821A0703C00178FA4 /* SLTesseract.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E0EF621A0703B00178FA4 /* SLTesseract.mm */; };
-		5B7E0F4121A0705E00178FA4 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3921A0705E00178FA4 /* libz.a */; };
-		5B7E0F4221A0705E00178FA4 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3A21A0705E00178FA4 /* libpng.a */; };
-		5B7E0F4321A0705E00178FA4 /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3B21A0705E00178FA4 /* libtiff.a */; };
-		5B7E0F4421A0705E00178FA4 /* libtesseract.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3C21A0705E00178FA4 /* libtesseract.dylib */; };
-		5B7E0F4521A0705E00178FA4 /* libtesseract.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3D21A0705E00178FA4 /* libtesseract.a */; };
-		5B7E0F4621A0705E00178FA4 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3E21A0705E00178FA4 /* libjpeg.a */; };
-		5B7E0F4721A0705E00178FA4 /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F3F21A0705E00178FA4 /* liblept.a */; };
-		5B7E0F4821A0705E00178FA4 /* libtesseract.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7E0F4021A0705E00178FA4 /* libtesseract.4.dylib */; };
 		5B7E0F4A21A0706900178FA4 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 5B7E0F4921A0706900178FA4 /* tessdata */; };
+		5BF9977F228DCBFE00C71DF9 /* CharacterOptionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9977E228DCBFE00C71DF9 /* CharacterOptionCollectionView.swift */; };
+		5BF99781228DCC3000C71DF9 /* DrawCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF99780228DCC3000C71DF9 /* DrawCanvasView.swift */; };
+		5BF99784228DCE9900C71DF9 /* TesseractData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF99783228DCE9900C71DF9 /* TesseractData.swift */; };
+		5BF997A1228DD55000C71DF9 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF99797228DD32F00C71DF9 /* libjpeg.a */; };
+		5BF997A2228DD55000C71DF9 /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF99798228DD32F00C71DF9 /* liblept.a */; };
+		5BF997A3228DD55000C71DF9 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF99793228DD32F00C71DF9 /* libpng.a */; };
+		5BF997A4228DD55000C71DF9 /* libtesseract.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF99799228DD32F00C71DF9 /* libtesseract.4.dylib */; };
+		5BF997A5228DD55000C71DF9 /* libtesseract.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF99796228DD32F00C71DF9 /* libtesseract.a */; };
+		5BF997A6228DD55000C71DF9 /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF99794228DD32F00C71DF9 /* libtiff.a */; };
+		5BF997A7228DD55000C71DF9 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF99792228DD32F00C71DF9 /* libz.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +49,7 @@
 		5B7E0EE221A06F6D00178FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B7E0EEB21A06FAF00178FA4 /* Handwriting Input Recognition-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Handwriting Input Recognition-Bridging-Header.h"; sourceTree = "<group>"; };
 		5B7E0EEC21A06FB000178FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B7E0EED21A06FB000178FA4 /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		5B7E0EED21A06FB000178FA4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B7E0EEE21A06FB000178FA4 /* CharacterOptionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterOptionItem.swift; sourceTree = "<group>"; };
 		5B7E0EF221A06FE000178FA4 /* CharacterOptionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterOptionItem.xib; sourceTree = "<group>"; };
 		5B7E0EF621A0703B00178FA4 /* SLTesseract.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SLTesseract.mm; sourceTree = "<group>"; };
@@ -121,6 +123,17 @@
 		5B7E0F3F21A0705E00178FA4 /* liblept.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblept.a; sourceTree = "<group>"; };
 		5B7E0F4021A0705E00178FA4 /* libtesseract.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtesseract.4.dylib; sourceTree = "<group>"; };
 		5B7E0F4921A0706900178FA4 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		5BF9977E228DCBFE00C71DF9 /* CharacterOptionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterOptionCollectionView.swift; sourceTree = "<group>"; };
+		5BF99780228DCC3000C71DF9 /* DrawCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCanvasView.swift; sourceTree = "<group>"; };
+		5BF99783228DCE9900C71DF9 /* TesseractData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractData.swift; sourceTree = "<group>"; };
+		5BF99792228DD32F00C71DF9 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libz.a; sourceTree = "<group>"; };
+		5BF99793228DD32F00C71DF9 /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpng.a; sourceTree = "<group>"; };
+		5BF99794228DD32F00C71DF9 /* libtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiff.a; sourceTree = "<group>"; };
+		5BF99795228DD32F00C71DF9 /* libtesseract.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtesseract.dylib; sourceTree = "<group>"; };
+		5BF99796228DD32F00C71DF9 /* libtesseract.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtesseract.a; sourceTree = "<group>"; };
+		5BF99797228DD32F00C71DF9 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
+		5BF99798228DD32F00C71DF9 /* liblept.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblept.a; sourceTree = "<group>"; };
+		5BF99799228DD32F00C71DF9 /* libtesseract.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtesseract.4.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,14 +141,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B7E0F4721A0705E00178FA4 /* liblept.a in Frameworks */,
-				5B7E0F4121A0705E00178FA4 /* libz.a in Frameworks */,
-				5B7E0F4521A0705E00178FA4 /* libtesseract.a in Frameworks */,
-				5B7E0F4421A0705E00178FA4 /* libtesseract.dylib in Frameworks */,
-				5B7E0F4221A0705E00178FA4 /* libpng.a in Frameworks */,
-				5B7E0F4821A0705E00178FA4 /* libtesseract.4.dylib in Frameworks */,
-				5B7E0F4321A0705E00178FA4 /* libtiff.a in Frameworks */,
-				5B7E0F4621A0705E00178FA4 /* libjpeg.a in Frameworks */,
+				5BF997A1228DD55000C71DF9 /* libjpeg.a in Frameworks */,
+				5BF997A2228DD55000C71DF9 /* liblept.a in Frameworks */,
+				5BF997A3228DD55000C71DF9 /* libpng.a in Frameworks */,
+				5BF997A4228DD55000C71DF9 /* libtesseract.4.dylib in Frameworks */,
+				5BF997A5228DD55000C71DF9 /* libtesseract.a in Frameworks */,
+				5BF997A6228DD55000C71DF9 /* libtiff.a in Frameworks */,
+				5BF997A7228DD55000C71DF9 /* libz.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,11 +164,10 @@
 		5B7E0EC121A06F6C00178FA4 = {
 			isa = PBXGroup;
 			children = (
-				5B7E0EF921A0705E00178FA4 /* include */,
-				5B7E0F3821A0705E00178FA4 /* lib */,
 				5B7E0ECC21A06F6C00178FA4 /* Handwriting Input Recognition */,
 				5B7E0EDF21A06F6D00178FA4 /* Handwriting Input RecognitionTests */,
 				5B7E0ECB21A06F6C00178FA4 /* Products */,
+				5BF99788228DD2DE00C71DF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,12 +183,11 @@
 		5B7E0ECC21A06F6C00178FA4 /* Handwriting Input Recognition */ = {
 			isa = PBXGroup;
 			children = (
+				5BF99785228DCFD500C71DF9 /* External */,
+				5BF99782228DCE7F00C71DF9 /* Models */,
+				5BF9977D228DCB8900C71DF9 /* Views */,
 				5B7E0EEC21A06FB000178FA4 /* AppDelegate.swift */,
-				5B7E0EF721A0703B00178FA4 /* SLTesseract.h */,
-				5B7E0EF621A0703B00178FA4 /* SLTesseract.mm */,
-				5B7E0EEE21A06FB000178FA4 /* CharacterOptionItem.swift */,
-				5B7E0EF221A06FE000178FA4 /* CharacterOptionItem.xib */,
-				5B7E0EED21A06FB000178FA4 /* CanvasView.swift */,
+				5B7E0EED21A06FB000178FA4 /* MainViewController.swift */,
 				5B7E0ED121A06F6D00178FA4 /* Assets.xcassets */,
 				5B7E0ED321A06F6D00178FA4 /* Main.storyboard */,
 				5B7E0ED721A06F6D00178FA4 /* Handwriting_Input_Recognition.entitlements */,
@@ -214,8 +224,7 @@
 				5B7E0F1821A0705E00178FA4 /* leptonica */,
 				5B7E0F3721A0705E00178FA4 /* tiffconf.h */,
 			);
-			name = include;
-			path = "Handwriting Input Recognition/include";
+			path = include;
 			sourceTree = "<group>";
 		};
 		5B7E0EFE21A0705E00178FA4 /* tesseract */ = {
@@ -293,8 +302,69 @@
 				5B7E0F3F21A0705E00178FA4 /* liblept.a */,
 				5B7E0F4021A0705E00178FA4 /* libtesseract.4.dylib */,
 			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		5BF9977D228DCB8900C71DF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E0EEE21A06FB000178FA4 /* CharacterOptionItem.swift */,
+				5B7E0EF221A06FE000178FA4 /* CharacterOptionItem.xib */,
+				5BF9977E228DCBFE00C71DF9 /* CharacterOptionCollectionView.swift */,
+				5BF99780228DCC3000C71DF9 /* DrawCanvasView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BF99782228DCE7F00C71DF9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BF99783228DCE9900C71DF9 /* TesseractData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BF99785228DCFD500C71DF9 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				5BF99786228DD13800C71DF9 /* Tesseract */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		5BF99786228DD13800C71DF9 /* Tesseract */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E0EF721A0703B00178FA4 /* SLTesseract.h */,
+				5B7E0EF621A0703B00178FA4 /* SLTesseract.mm */,
+				5B7E0EF921A0705E00178FA4 /* include */,
+				5B7E0F3821A0705E00178FA4 /* lib */,
+			);
+			path = Tesseract;
+			sourceTree = "<group>";
+		};
+		5BF99788228DD2DE00C71DF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BF99791228DD32F00C71DF9 /* lib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BF99791228DD32F00C71DF9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				5BF99792228DD32F00C71DF9 /* libz.a */,
+				5BF99793228DD32F00C71DF9 /* libpng.a */,
+				5BF99794228DD32F00C71DF9 /* libtiff.a */,
+				5BF99795228DD32F00C71DF9 /* libtesseract.dylib */,
+				5BF99796228DD32F00C71DF9 /* libtesseract.a */,
+				5BF99797228DD32F00C71DF9 /* libjpeg.a */,
+				5BF99798228DD32F00C71DF9 /* liblept.a */,
+				5BF99799228DD32F00C71DF9 /* libtesseract.4.dylib */,
+			);
 			name = lib;
-			path = "Handwriting Input Recognition/lib";
+			path = "Handwriting Input Recognition/External/Tesseract/lib";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,10 +471,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B7E0EF021A06FB000178FA4 /* CanvasView.swift in Sources */,
+				5B7E0EF021A06FB000178FA4 /* MainViewController.swift in Sources */,
 				5B7E0EF121A06FB000178FA4 /* CharacterOptionItem.swift in Sources */,
+				5BF99781228DCC3000C71DF9 /* DrawCanvasView.swift in Sources */,
+				5BF9977F228DCBFE00C71DF9 /* CharacterOptionCollectionView.swift in Sources */,
 				5B7E0EEF21A06FB000178FA4 /* AppDelegate.swift in Sources */,
 				5B7E0EF821A0703C00178FA4 /* SLTesseract.mm in Sources */,
+				5BF99784228DCE9900C71DF9 /* TesseractData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,17 +642,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/${PRODUCT_NAME}/External/Tesseract/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chargeflux.HandwritingInputRecognition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -605,17 +668,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-					"$(PROJECT_DIR)/Handwriting\\ Input\\ Recognition/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/${PRODUCT_NAME}/External/Tesseract/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chargeflux.HandwritingInputRecognition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

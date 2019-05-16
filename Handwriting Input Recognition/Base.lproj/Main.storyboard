@@ -702,11 +702,11 @@
             </objects>
             <point key="canvasLocation" x="79" y="158"/>
         </scene>
-        <!--Canvas View-->
+        <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController id="XfG-lQ-9wD" customClass="CanvasView" customModule="Handwriting_Input_Recognition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="Handwriting_Input_Recognition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="407"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -727,7 +727,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="480" height="60"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <collectionView ambiguous="YES" selectable="YES" allowsEmptySelection="NO" id="57b-TD-1eY">
+                                        <collectionView ambiguous="YES" selectable="YES" allowsEmptySelection="NO" id="57b-TD-1eY" customClass="CharacterOptionCollectionView" customModule="Handwriting_Input_Recognition" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="480" height="60"/>
                                             <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" id="L9S-8u-h9I">
@@ -750,7 +750,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p2q-lv-lg4" customClass="DrawCanvas" customModule="Handwriting_Input_Recognition" customModuleProvider="target">
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p2q-lv-lg4" customClass="DrawCanvasView" customModule="Handwriting_Input_Recognition" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="321"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
@@ -759,7 +759,7 @@
                     <connections>
                         <outlet property="CharacterOptionCollection" destination="57b-TD-1eY" id="dEv-wk-Y66"/>
                         <outlet property="CharacterOutput" destination="HXj-gw-cpv" id="iwz-7a-e1Z"/>
-                        <outlet property="DrawView" destination="p2q-lv-lg4" id="BZg-Vm-kEk"/>
+                        <outlet property="DrawCanvasView" destination="p2q-lv-lg4" id="BZg-Vm-kEk"/>
                     </connections>
                 </viewController>
             </objects>

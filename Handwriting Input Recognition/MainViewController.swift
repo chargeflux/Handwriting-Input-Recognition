@@ -1,5 +1,5 @@
 //
-//  CanvasView.swift
+//  MainViewController.swift
 //  Handwriting Input Recognition
 //
 //  Created by chargeflux on 11/10/18.
@@ -9,11 +9,11 @@
 import Cocoa
 import Carbon.HIToolbox
 
-class CanvasView: NSViewController {
+class MainViewController: NSViewController {
     @IBOutlet var CharacterOutput: NSTextField!
     
     /// Represents a custom NSView class that enables drawing for user
-    @IBOutlet var DrawView: DrawCanvas!
+    @IBOutlet var DrawCanvasView: DrawCanvasView!
     
     /// Holds instance of "CharacterChoices" class that holds all possible interpretations by Tesseract
     var choices: CharacterChoices!
@@ -30,17 +30,13 @@ class CanvasView: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Make canvas background to be white
-        self.view.wantsLayer = true
-        self.view.layer?.backgroundColor = NSColor.white.cgColor
-        
         // Start monitor for keyboard shortcuts via keyDown NSEvents
         startKeyboardShortcutMonitor()
     }
     
-    /// Reset `CanvasView` completely
-    func resetCanvasView() {
-        DrawView?.clearCanvas()
+    /// Reset application state
+    func resetState() {
+        DrawCanvasView?.clearCanvas()
         self.CharacterOutput.stringValue = ""
         self.choices = nil
         CharacterOptionCollection.reloadData()
@@ -65,19 +61,19 @@ class CanvasView: NSViewController {
         // system won't recognize the key press as a valid input/shortcut. Otherwise the event
         // is returned as is to the system input manager to be processed.
         switch Int(event.keyCode) {
-        /// Check if Escape key is pressed: Clear canvas
+        /// Check if Escape key is pressed: Clear application state
         case kVK_Escape:
             if event.isARepeat {
-                // Hold Escape key to reset `CanvasView`
-                resetCanvasView()
+                // Hold Escape key to reset application state
+                resetState()
                 return nil
             }
-            DrawView?.clearCanvas()
+            DrawCanvasView?.clearCanvas()
             self.choices = nil
             return nil
         /// Check if Return key is pressed: Initiate OCR and parse results
         case kVK_Return:
-            guard let (result, rawChoiceArray) = DrawView?.ocr() else{
+            guard let (result, rawChoiceArray) = DrawCanvasView?.ocr() else{
                 return nil
             }
             self.result = result
@@ -96,12 +92,12 @@ class CanvasView: NSViewController {
                 // Prevents overwriting of clipboard if "C" is held down too long
                 if choices != nil {
                     copyCharacterOutputToClipboard()
-                    resetCanvasView()
+                    resetState()
                 }
                 return nil
             }
             copyCharacterOutputToClipboard()
-            resetCanvasView()
+            resetState()
             return nil
         default:
             return event
@@ -109,99 +105,7 @@ class CanvasView: NSViewController {
     }
 }
 
-/// Custom NSView class for drawing capabilities
-class DrawCanvas: NSView {
-    // Initiate class variables for initiating path and Tesseract
-    // Path is not contiguous and will only be cleared upon user action (escape key)
-    var startingPoint:CGPoint!
-    var path: NSBezierPath = NSBezierPath()
-    
-    /// Get starting point and tells `path` the starting point
-    /// Will be called every time user clicks left button (allowing for new paths)
-    override func mouseDown(with event: NSEvent) {
-        let mouseButton = event.buttonNumber
-        
-        // Debugging purposes
-        if mouseButton == 0{
-            startingPoint = event.locationInWindow //480,320 top right, 0,0 bottom left
-        }
-        
-        path.move(to: convert(event.locationInWindow, from: nil))
-        needsDisplay = true
-    }
-
-    /// Tells the new destination point from starting point to `path` and makes it draw
-    override func mouseDragged(with event: NSEvent) {
-        path.line(to: convert(event.locationInWindow, from: nil))
-        needsDisplay = true
-    }
-
-    /// Drawing function of path with properties
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-        path.lineWidth = 3.0
-        path.lineCapStyle = .round
-        path.lineJoinStyle = .round
-        NSColor.black.set()
-        path.stroke()
-    }
-    
-    /// Clears canvas
-    func clearCanvas() {
-        path.removeAllPoints() // .removeAllPoints & reinstantiating `path`
-        path = NSBezierPath() // with NSBezierPath() are required to remove `path` completely
-        needsDisplay = true
-    }
-    
-    /// Initiates OCR via Tesseract
-    /// - Returns:
-    ///    - String: Tesseract's result with highest confidence interval
-    ///    - NSArray: A nested array of all possible character choices interpreted by Tesseract with CI
-    func ocr() -> (String, NSArray) {
-        let Tesseract = SLTesseract()
-        Tesseract.language = "jpn"
-        let viewSize: NSSize = self.bounds.size;
-        let canvasRect = NSRect(x: 0, y: 0, width: viewSize.width, height: viewSize.height)
-        let canvasBIR: NSBitmapImageRep = self.bitmapImageRepForCachingDisplay(in: canvasRect)!
-        self.cacheDisplay(in: canvasRect, to: canvasBIR)
-        let textImage = NSImage(size: viewSize)
-        textImage.addRepresentation(canvasBIR)
-        let rawChoiceArray: NSArray = Tesseract.getClassiferChoicesPerSymbol(textImage)! as NSArray
-        return (Tesseract.recognize(textImage), rawChoiceArray)
-    }
-}
-
-/// Holds all possible choices as interpreted by Tesseract for given canvas image
-/// `possibleChoice`: struct
-///    - character = a possible character as interpreted by Tesseract
-///    - confidenceInterval = associated CI to possible character
-class CharacterChoices {
-    struct possibleChoice {
-        var character: String
-        var confidenceInterval: Double
-    }
-
-    let totalChoices: Int?
-    
-    /// Array containing all `possibleChoice` instances
-    var possibleChoicesArray: Array<possibleChoice> = []
-    
-    /// Initialize class `CharacterChoices`
-    init?(choicesArray: Array<Array<NSArray>>) {
-        guard choicesArray.count == 1 else {
-            return nil
-        }
-        self.totalChoices = choicesArray[0].count
-        for choiceArray in choicesArray{
-        for choice:NSArray in choiceArray{
-            let tempChoice = possibleChoice(character: choice[0] as! String, confidenceInterval: choice[1] as! Double)
-            possibleChoicesArray.append(tempChoice)
-            }
-        }
-    }
-}
-
-extension CanvasView: NSCollectionViewDataSource {
+extension MainViewController: NSCollectionViewDataSource {
     static let characterOptionItem = "CharacterOptionItem"
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -212,7 +116,7 @@ extension CanvasView: NSCollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: CanvasView.characterOptionItem), for: indexPath)
+        let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: MainViewController.characterOptionItem), for: indexPath)
         
         if self.choices?.totalChoices == nil {
             return item
@@ -226,7 +130,7 @@ extension CanvasView: NSCollectionViewDataSource {
 
 }
 
-extension CanvasView: NSCollectionViewDelegate {
+extension MainViewController: NSCollectionViewDelegate {
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         
         // Append selection to `CharacterOutput` text field
