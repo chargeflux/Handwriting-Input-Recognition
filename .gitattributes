@@ -1,3 +1,1 @@
-Handwriting?Input?Recognition/include/** linguist-vendored
-Handwriting?Input?Recognition/SLTesseract.h linguist-vendored
-Handwriting?Input?Recognition/SLTesseract.mm linguist-vendored
+Handwriting?Input?Recognition/External/Tesseract/** linguist-vendored
